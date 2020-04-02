@@ -44,7 +44,6 @@ class _MyAppState extends State<MyApp> {
         _filterData[2]['value'].toString() +
         " " +
         _filterData[3]['value'].toString());*/
-
     setState(() {
       _filters = _filterData;
       _availableMeals = DUMMY_MEALS.where((test) {
