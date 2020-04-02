@@ -1,16 +1,22 @@
 # mealapp
 
-A new Flutter project.
+A new Flutter project on a app with meal categories and their recipes
 
-## Getting Started
+## Screenshots
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+**Category Screen:**
+![alt text](https://res.cloudinary.com/fwiz43/image/upload/c_scale,h_768,w_432,f_auto,q_auto/v1585825524/mealapp_ss/Screenshot_1585824890_a9hsse.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+**Filter Screen:**
+![alt text](https://res.cloudinary.com/fwiz43/image/upload/c_scale,h_768,w_432,f_auto,q_auto/v1585825525/mealapp_ss/Screenshot_1585824902_indz9e.png)
+
+
+**Favourite Screen:**
+![alt text](https://res.cloudinary.com/fwiz43/image/upload/c_scale,h_768,w_432,f_auto,q_auto/v1585825524/mealapp_ss/Screenshot_1585824949_tluvkm.png)
+
+
+
