@@ -3,16 +3,18 @@ import 'package:flutter/material.dart';
 
 import './category_screen.dart';
 import './favorites.dart';
+import '../model/meal.dart';
 import '../widgets/bottomModalScreen.dart';
 import '../widgets/mainDrawer.dart';
 
 class TabScreen extends StatefulWidget {
   @override
   _TabScreenState createState() => _TabScreenState();
-  final List<Map<String, dynamic>> _currentFilterOption;
+  final List<Map<String, Object>> _currentFilterOption;
   final Function _saveFilter;
+  final List<Meal> _favouriteScreen;
 
-  TabScreen(this._currentFilterOption, this._saveFilter);
+  TabScreen(this._currentFilterOption, this._saveFilter, this._favouriteScreen);
 }
 
 class _TabScreenState extends State<TabScreen> {
@@ -37,16 +39,23 @@ class _TabScreenState extends State<TabScreen> {
     'vegetarian': false
   };
 */
-  final List<Map<String, Object>> _pages = [
-    {'page': CategoryScreen(), 'title': 'Category'},
-    {'page': Favorites(), 'title': 'Favourites'}
-  ];
+  List<Map<String, Object>> _pages;
   int _selectedPageIndex = 0;
 
   void _selectPage(int index) {
     setState(() {
       _selectedPageIndex = index;
     });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pages = [
+      {'page': CategoryScreen(), 'title': 'Category'},
+      {'page': Favorites(widget._favouriteScreen), 'title': 'Favourites'}
+    ];
   }
 
 /*  Widget _switchBuilder(BuildContext context, String _title, bool _value) {

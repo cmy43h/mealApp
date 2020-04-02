@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MainDrawer extends StatelessWidget {
-  void _tapHandler() {}
-
   Widget _buildListTile(
       BuildContext context, IconData icon, String title, Function _tapHandler) {
     return ListTile(

@@ -1,11 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:shopapp/dummyData.dart';
 
 import '../dummyData.dart';
 
 class MealDetailScreen extends StatelessWidget {
-  const MealDetailScreen({Key key}) : super(key: key);
+  final Function toggleFavouriteState;
+  final Function isFavourite;
+
+  const MealDetailScreen({Key key, this.toggleFavouriteState, this.isFavourite})
+      : super(key: key);
   static const routName = '/meal-detail';
 
   @override
@@ -50,10 +53,10 @@ class MealDetailScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(right: 20),
             child: GestureDetector(
-              onTap: () {
-                Navigator.of(context).pop(mealId);
-              },
-              child: Icon(Icons.delete),
+              onTap: () => toggleFavouriteState(mealId),
+              child: isFavourite(mealId)
+                  ? Icon(Icons.favorite)
+                  : Icon(Icons.favorite_border),
             ),
           )
         ],
